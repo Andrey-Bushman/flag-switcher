@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Пример</title>
+</head>
+<body>
+<p>Пример использования веб-компонента
+    <flag-switcher id="fs1" onchange="console.log(event.detail)" ondisabling-change="console.log(event.detail)">
+    </flag-switcher>, указанного непосредственно в HTML-разметке.</p>
+<button id="fs1-switcher" type="button" onclick="window.fs1.disabled = !window.fs1.disabled;
+            event.target.textContent = window.fs1.disabled ? 'Разблокировать' : 'Блокировать';">Блокировать</button>
+<p>А этот веб-компонент <span id="fs2-container"></span> добавлен с помощью JavaScript кода.</p>
+</body>
+<button id="fs2-switcher"></button>
+<script type="text/javascript" src="dist/index.js"></script>
+</html>
